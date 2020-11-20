@@ -35,7 +35,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             style="@style/article_text"
-            android:text="@string/author"
             app:layout_constraintStart_toStartOf="@id/text_title"
             app:layout_constraintTop_toBottomOf="@id/text_title" />
 
@@ -44,8 +43,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/article_text"
-            android:layout_marginStart="6dp"
-            app:layout_constraintStart_toEndOf="@id/text_author_name"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/text_title"
             app:layout_constraintTop_toTopOf="@id/text_author_name"
             android:text="@{article.author}"
             tools:text="AKA小安老師" />
@@ -55,6 +54,7 @@
             style="@style/article_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="2dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:background="@android:color/darker_gray"
@@ -68,9 +68,8 @@
             android:id="@+id/text_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             style="@style/article_text"
-            android:text="@string/time"
             app:layout_constraintStart_toStartOf="@id/text_title"
             app:layout_constraintTop_toBottomOf="@id/text_author_name" />
 
@@ -79,11 +78,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/article_text"
-            android:layout_marginStart="6dp"
-            app:layout_constraintStart_toEndOf="@id/text_time"
+            android:textSize="10dp"
+            app:layout_constraintStart_toStartOf="@id/text_title"
             app:layout_constraintTop_toTopOf="@id/text_time"
             android:text="@{article.createdTime}"
-
             tools:text="2020/6/25/9:36" />
 
         <TextView
