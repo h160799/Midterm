@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/articleFragment">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.johnny.publisher.MainActivity"
+        android:label="MainActivity" />
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.johnny.publisher.article.ArticleFragment"
+        android:label="ArticleFragment" >
+        <action
+            android:id="@+id/action_articleFragment_to_postDialog"
+            app:destination="@id/postDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/postDialog"
+        android:name="com.johnny.publisher.post.PostDialog"
+        android:label="PostDialog" >
+        <action
+            android:id="@+id/action_postDialog_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </dialog>
+</navigation>
